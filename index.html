@@ -103,39 +103,34 @@ Meu objetivo é contribuir com projetos que façam a diferença, aprendendo e ev
     </div>
   </section>
 
-  <!-- Seção Contato com Formulário Simples (Fundo das Caixas em PRETO, Botão Integrado) -->
+  <!-- Seção Contato com Formulário (method="POST" Confirmado) -->
   <section id="contato">
     <h3 class="section-title">Contato</h3>
     <div class="content-block" style="text-align:center;">
       <p>Vamos conversar! Preencha o formulário abaixo ou me encontre nas redes sociais.</p>
-      <!-- Formulário Básico (name em cada campo, br para espaçamento, sem JS) -->
+      
+      <!-- Formulário com method="POST" - Isso é o que resolve o erro -->
       <form action="https://formsubmit.co/gabriel.btmello@senacsp.edu.br" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
-        <!-- Hidden só para assunto customizado -->
-        <input type="hidden" name="_captcha" value="Nova Mensagem do Portfolio Gabriel" />
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nova Mensagem do Portfolio Gabriel" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://formsubmit.co/success" />
+        <input type="hidden" name="_autoresponse" value="Obrigado pela mensagem! Recebi seus dados e entrarei em contato em breve via email ou WhatsApp. Volte para https://brandao-gabriel.github.io/Portfolio-pessoal-profissional-Gabriel/." />
  
-        
-        <!-- Campo Nome (Fundo PRETO, Texto BRANCO) -->
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 4px; margin-bottom: 10px; background: #000; color: #fff;" /><br><br>
         
-        <!-- Campo Email (Fundo PRETO, Texto BRANCO) -->
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" placeholder="Digite seu email" required style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 4px; margin-bottom: 10px; background: #000; color: #fff;" /><br><br>
         
-        <!-- Campo Telefone (Fundo PRETO, Texto BRANCO) -->
         <label for="telefone">Telefone:</label><br>
         <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 4px; margin-bottom: 10px; background: #000; color: #fff;" /><br><br>
         
-        <!-- Campo Mensagem (Fundo PRETO, Texto BRANCO) -->
         <label for="mensagem">Mensagem:</label><br>
         <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required style="width: 100%; padding: 10px; border: 1px solid #333; border-radius: 4px; margin-bottom: 15px; resize: vertical; background: #000; color: #fff;"></textarea><br><br>
         
-        <!-- Botão Enviar Mensagem (Integrado: Fundo Rosa, Texto Branco, Arredondado) -->
         <button type="submit" class="btn" style="width: 100%; background: rgb(158, 21, 21); color: #fff; border: none; border-radius: 30px; padding: 15px; font-size: 16px; font-weight: 500; cursor: pointer; font-family: 'Montserrat', sans-serif;">Enviar Mensagem</button>
       </form>
       
-      <!-- Ícones Sociais Mantidos -->
       <p style="margin-top: 20px;">Ou me encontre nas redes sociais:</p>
       <div class="social-icons" style="justify-content:center; margin-top: 15px;">
         <a href="https://br.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
